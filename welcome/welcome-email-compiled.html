@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width">
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title>
+    <!-- the <title> tag shows on email notifications on Android 4.4. -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,700i');
+              @import url('https://fonts.googleapis.com/css?family=Cabin:700');
+        	/* ensure that clients don't add any padding or spaces around the email design and allow us to style emails for the entire width of the preview pane */
+      		/* Ensures Webkit- and Windows-based clients don't automatically resize the email text. */
+      		/* Forces Yahoo! to display emails at full width */
+          /* Forces Hotmail to display emails at full width */
+          .ReadMsgBody,
+          .ExternalClass {
+      			width: 100%;
+      			background-color: #f4f4f4;
+          }
+          /* Forces Hotmail to display normal line spacing. */
+      		.ExternalClass,
+      		.ExternalClass p,
+      		.ExternalClass span,
+      		.ExternalClass font,
+      		.ExternalClass td,
+      		.ExternalClass div {
+      			line-height:100%;
+          }
+          /* Resolves the Outlook 2007, 2010, and Gmail td padding issue, and removes spacing around tables that Outlook adds. */
+          /* Ensures images don't have borders or text-decorations applied to them by default. */
+          /* Styles Yahoo's auto-sensing link color and border */
+          /* Styles the tel URL scheme */
+          /* Media queries for when the viewport is smaller than the default email width but not too narrow. */
+          @media screen and (max-device-width: 600px), screen and (max-width: 600px) {
+      			/* Constrains email width for small screens */
+      			table[class="email-container"] {
+      				width: 100% !important;
+      			}
+      			/* Constrains tables for small screens */
+      			table[class="fluid"] {
+      				width: 100% !important;
+      			}
+      			/* Forces images to resize to full width of their container */
+      			img[class="fluid"],
+      			img[class="force-col-center"] {
+      				width: 100% !important;
+      				max-width: 100% !important;
+      				height: auto !important;
+      			}
+      			/* And centers these ones */
+      				img[class="force-col-center"] {
+      				margin: auto !important;
+      			}
+      			/* Forces table cells into rows */
+      			td[class="force-col"],
+      			td[class="force-col-center"] {
+      				display: block !important;
+      				width: 100% !important;
+      				clear: both;
+      			}
+      			/* And centers these ones */
+      			td[class="force-col-center"] {
+      				text-align: center !important;
+      			}
+      			/* Forces table cells into rows */
+      			/* Floats a previously stacked image to the left */
+      			img[class="col-3-img-l"] {
+      				float: left;
+      				margin: 0 15px 15px 0;
+      			}
+      			/* Floats a previously stacked image to the right */
+      			img[class="col-3-img-r"] {
+      				float: right;
+      				margin: 0 0 15px 15px;
+      			}
+      			/* Makes buttons full width */
+      			table[class="button"] {
+      				width: 100% !important;
+      			}
+          }
+          /* Media queries for when the viewport is narrow. */
+          /* Rules prefixed with 'hh-' (for 'handheld') repeat much of what's above, but these don't trigger until the smaller screen width. */
+          @media screen and (max-device-width: 425px), screen and (max-width: 425px) {
+      			/* Helper only visible on handhelds. All styles are inline along with a `display:none`, which this class overrides */
+      			div[class="hh-visible"] {
+      				display: block !important;
+      			}
+      			/* Center stuff */
+      			div[class="hh-center"] {
+      				text-align: center;
+      				width: 100% !important;
+      			}
+      			/* Constrain tables for small screens */
+      			table[class="hh-fluid"] {
+      				width: 100% !important;
+      			}
+      			/* Force images to resize to full width of their container */
+      			img[class="hh-fluid"],
+      			img[class="hh-force-col-center"] {
+      				width: 100% !important;
+      				max-width: 100% !important;
+      				height: auto !important;
+      			}
+      			/* And center these ones */
+      			img[class="hh-force-col-center"] {
+      				margin: auto !important;
+      			}
+      			/* Force table cells into rows */
+      			td[class="hh-force-col"],
+      			td[class="hh-force-col-center"] {
+      				display: block !important;
+      				width: 100% !important;
+      				clear: both;
+      			}
+      			/* And center these ones */
+      			td[class="hh-force-col-center"] {
+      				text-align: center !important;
+      			}
+      			/* Stack the previously floated images */
+      			img[class="col-3-img-l"],
+      			img[class="col-3-img-r"] {
+      				float: none !important;
+      				margin: 15px auto !important;
+      				text-align: center !important;
+      			}
+          }
+    </style>
+  </head>
+  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" bgcolor="#f4f4f4" style="margin:0;padding:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;height:100% !important;width:100% !important;margin:0; padding:0; -webkit-text-size-adjust:none; -ms-text-size-adjust:none;">
+    <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#f4f4f4" id="bodyTable" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;margin:0;padding:0;height:100% !important; max-width:600px !important;border-collapse: collapse;table-layout: fixed;margin:0 auto;">
+      <tr>
+        <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+          <!-- CSS Image background in Outlook : BEGIN -->
+          <!-- Best used with absolute image paths -->
+          <!--[if gte mso 9]>
+            <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+              <v:fill type="tile" color="#f4f4f4" src="assets/nice_snow.png">
+              </v:background>
+          <![endif]-->
+          <!-- CSS Image background in Outlook : END -->
+          <!-- Logo Left, Nav Right, 100% Nav Bar : BEGIN -->
+          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" bgcolor="#555555" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;text-align: center;">
+            <tr>
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;margin: auto;" class="email-container">
+                  <!--          <tr>
+            <td height="10" style="font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr> -->
+                  <tr>
+                    <!--             <td class="hh-force-col-center" valign="middle" style="text-align: left;">
+
+              <img src="http://placehold.it/200x40/888888/555555" alt="alt text" height="40" width="200" border="0">
+            </td> -->
+                    <!--             <td class="hh-force-col-center" valign="middle" style="padding: 10px 0;text-align: right;">
+              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 1</a>&nbsp;&nbsp;
+              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 2</a>&nbsp;&nbsp;
+              <a href="" style="color: #ffffff;font-family: sans-serif;">Link 3</a>
+            </td> -->
+                  </tr>
+                  <!--           <tr>
+            <td height="10" style="font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr> -->
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- Logo Left, Nav Right, 100% Nav Bar : END -->
+          <!-- Logo Left Nav Right + Vertical Padding : BEGIN -->
+          <!--   <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" class="email-container" style="margin: auto;">
+    <tr>
+      <td height="30" style="font-size: 0; line-height: 0;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="force-col-center" valign="middle" style="padding: 20px 0;text-align: left;">
+        <img src="http://placehold.it/300x75/888888/7777777" alt="alt text" height="75" width="300" border="0">
+      </td>
+      <td class="force-col-center" valign="middle" style="padding: 20px 0;text-align: right;">
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 1</a>&nbsp;&nbsp;
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 2</a>&nbsp;&nbsp;
+        <a href="#" style="font-family: sans-serif;color: #444;">Link 3</a>
+      </td>
+    </tr>
+    <tr>
+      <td height="30" style="font-size: 0; line-height: 0;">&nbsp;</td>
+    </tr>
+  </table> -->
+          <!-- Logo Left Nav Right + Vertical Padding : END -->
+          <!-- Email Container : BEGIN -->
+          <!-- This table wraps the whole body email within it's width (600px), sets the background color (white) and border (thin, gray, solid) -->
+          <table border="0" width="600" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;border: 1px solid #e5e5e5;margin: auto;" class="email-container">
+            <!-- Single Fluid Image, No Crop : BEGIN -->
+            <table class="header-table" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:rgba(74, 137, 245, 0.99);width:100%;">
+              <tr>
+                <td class="header-cell" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-top:35px;">
+                  <img class="logo" src="logo.svg" alt="Logo" border="0" style="display:block; margin-top: 35px; margin-bottom: 16px;" />
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                  <h1 class="header-title" style="color:#ffffff;font-family:'Lato', sans-serif;font-size:30px;font-weight:bold;margin-bottom:0;margin-top:20px;padding:0 15%;">Welcome to Rent Application!</h1>
+                </td>
+              </tr>
+              <tr>
+                <td class="header-paragraph-cell" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;color:#ffffff;font-family:'Lato', sans-serif;font-size:14px;font-weight:normal;padding:0 10%;padding-bottom:39px;">
+                  <p style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-align:left; max-width: 480px;">Rent Application helps thousands of landlords and property managers like you accept applications and review credit checks online. You’re only minutes away from receiving your first application!</p>
+                </td>
+              </tr>
+            </table>
+            <!-- Single Fluid Image, No Crop : END -->
+            <!-- Full Width, Fluid Column : BEGIN -->
+            <tr>
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;border-bottom: 1px solid #e5e5e5;">
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                  <tr>
+                    <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <h2 class="things-you-can-do" style="color:#333745;font-family:'Lato', sans-serif;font-size:20px;font-weight:bold;">Here are a few things you can do</h2>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Full Width, Fluid Column : END -->
+            <!-- Two Columns, With Padding ==> Stacked Layout : BEGIN -->
+            <tr>
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;border-bottom: 1px solid #e5e5e5;padding: 0 30px;">
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center" class="fluid" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;" class="empty-spacer">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-right: 30px;" class="hh-force-col-center">
+                      <img src="https://placeholdit.imgix.net/~text?txtsize=13&txt=139%C3%97107&w=139&h=107" alt="alt text" height="107" width="139" border="0" style="-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display: block;margin: auto;" class="hh-force-col-center">
+                    </td>
+                    <td valign="top" class="hh-force-col" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-left: 0;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                        <tr>
+                          <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444; text-align: left; padding-top: 4%;" valign="center">
+                            <div style="font-size: 0; line-height: 0; display: none; height: 30px;" class="hh-visible"></div>
+                            <div style="font-size: 22px;line-height: 1;" class="hh-center"><span class="customize-title" style="font-family:'Lato', sans-serif;font-size:16px;font-weight:bold;color:#333745;">Customize your application form</span></div>
+                            <br>
+                            <span class="customize-paragraph" style="font-family:'Lato';font-size:14px;font-weight:normal;font-style:normal;line-height:1.41;color:#333745;">Easily add, remove, or change questions until your form is exactly as you like it!</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-right: 30px;" class="hh-force-col-center">
+                      <img src="https://placeholdit.imgix.net/~text?txtsize=13&txt=139%C3%97107&w=139&h=107" alt="alt text" height="107" width="139" border="0" style="-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display: block;margin: auto;" class="hh-force-col-center">
+                    </td>
+                    <td valign="top" class="hh-force-col" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-left: 0;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                        <tr>
+                          <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444; text-align: left; padding-top: 4%;" valign="center">
+                            <div style="font-size: 0; line-height: 0; display: none; height: 30px;" class="hh-visible"></div>
+                            <div style="font-size: 22px;line-height: 1;" class="hh-center"><span class="customize-title" style="font-family:'Lato', sans-serif;font-size:16px;font-weight:bold;color:#333745;">Create a unique application link</span></div>
+                            <br>
+                            <span class="customize-paragraph" style="font-family:'Lato';font-size:14px;font-weight:normal;font-style:normal;line-height:1.41;color:#333745;">Use a custom applicaton link -- It’s easy for both you and your applicants to remember (and it’s easy to link to from your website)</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-right: 30px;" class="hh-force-col-center">
+                      <img src="https://placeholdit.imgix.net/~text?txtsize=13&txt=139%C3%97107&w=139&h=107" alt="alt text" height="107" width="139" border="0" style="-ms-interpolation-mode:bicubic;border:0;outline:none;text-decoration:none;display: block;margin: auto;" class="hh-force-col-center">
+                    </td>
+                    <td valign="top" class="hh-force-col" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-left: 0;">
+                      <table cellspacing="0" cellpadding="0" border="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                        <tr>
+                          <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%; font-family: sans-serif; font-size: 16px; line-height: 22px; color: #444444; text-align: left; padding-top: 4%;" valign="center">
+                            <div style="font-size: 0; line-height: 0; display: none; height: 30px;" class="hh-visible"></div>
+                            <div style="font-size: 22px;line-height: 1;" class="hh-center"><span class="customize-title" style="font-family:'Lato', sans-serif;font-size:16px;font-weight:bold;color:#333745;">Set up automated screening</span></div>
+                            <br>
+                            <span class="customize-paragraph" style="font-family:'Lato';font-size:14px;font-weight:normal;font-style:normal;line-height:1.41;color:#333745;">Quickly process credit reports, background checks, and prior eviction searches</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                <table class="questions-table" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#d6e4ff;padding:0 15%;width:100%;">
+                  <tr>
+                    <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <h2 class="questions-title" style="font-family:'Lato', sans-serif;font-size:18px;font-weight:bold;font-style:normal;text-align:center;color:#333745;">How much does my account cost?</h2>
+                      <p class="questions-paragraph" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:'Lato';font-size:14px;font-weight:normal;font-style:normal;line-height:1.41;color:#333745;padding:0 13%;text-align:left;">Rent Application is completely free for you to use—There are no monthly fees or sign up fees.</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <h2 class="questions-title" style="font-family:'Lato', sans-serif;font-size:18px;font-weight:bold;font-style:normal;text-align:center;color:#333745;">Then how does Rent Application make money?</h2>
+                      <p class="questions-paragraph" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:'Lato';font-size:14px;font-weight:normal;font-style:normal;line-height:1.41;color:#333745;padding:0 13%;text-align:left;">Applicants pay the application fee which completely covers the cost of the reports. If you don't need our tenant screening reports, you can still use our industry leading application service for free and there's also no cost to the applicant.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                <table class="cta-table" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;padding-bottom:28px;">
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td class="cta-cell" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <a href="#" class="cta-button" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Cabin;font-size:17.3px;font-weight:bold;font-style:normal;color:#ffffff;padding:12px 28px;border-radius:5.8px;background-color:#0fc58d;box-shadow:-2px 5px 1px 1px #138763;border:solid 0.7px #0fc58d;display:block;margin:auto;text-decoration:none;">Go to my Dashboard</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="30" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;font-size: 0; line-height: 0;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                      <p class="welcome-footer" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Lato;font-size:14px;font-weight:normal;font-style:italic;line-height:1.43;text-align:center;color:rgba(51, 55, 69, 0.58);">
+                        Happy leasing! <br/> --Eric & the Rent Application Team <br/>www.rentapplication.net
+            		</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Three Column ==> Stacked Wide Layout ==> Stacked Narrow Layout : END -->
+          </table>
+          <!-- Email Container : END -->
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
