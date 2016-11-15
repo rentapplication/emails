@@ -160,7 +160,7 @@
             2. MSO tags for Desktop Windows Outlook enforce a 680px width.
             Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.
         -->
-        <div style="max-width: 680px; margin: auto;>
+        <div style="max-width: 680px; margin: auto;">
             <!--[if mso]>
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
             <tr>
@@ -175,15 +175,21 @@
                     <td bgcolor="#4a89f5">
 
                         <table der="0" cellspacing="0" cellpadding="0" width="100%">
-                            <tr>
+                            <tr id="title-row">
                                 <td align="center" width="100%">
-                                    <img class="logo" src="logo.svg" alt="Logo" border="0" style="display:block; margin-top: 35px; margin-bottom: 16px;" />
+                                    <h1 class="header-title" style="margin: 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 25.2px; font-weight: bold; font-style: normal; text-align: center; color: #ffffff; margin-bottom: 0;">Hooray!</h1>
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr id="logo-row">
                                 <td align="center" width="100%">
-                                    <h1 class="header-title" style="margin: 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 25.2px; font-weight: bold; font-style: normal; text-align: center; color: #ffffff;">You’ve Submitted an Application!</h1>
+                                    <img class="logo" src="logo.svg" alt="Logo" border="0" style="display:block; margin-top: 16px; margin-bottom: 16px;" />
+                                </td>
+                            </tr>
+
+                            <tr id="subtitle-row">
+                                <td align="center" width="100%">
+                                    <p class="header-paragraph" style="margin: 0 20px 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 18.2px; font-weight: normal; font-style: normal; text-align: center; color: #ffffff;">You’ve submitted an application.</p>
                                 </td>
                             </tr>
                         </table>
@@ -373,6 +379,13 @@
                                                 </p>
                                             </td>
                                         </tr>
+                              <tr id="button-row">
+                                <td class="cta-cell" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                                  <a href="#" class="cta-button" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Lato, Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;font-style:normal;color:#ffffff;padding:12px 28px;border-radius:5.8px;background-color:#0fc58d;box-shadow:-2px 5px 1px 1px #138763;border:solid 0.7px #0fc58d;display:block;margin:auto;margin-bottom:40px;text-decoration:none; width: 200px;text-shadow:-1px 1px rgba(0,0,0,0.3)">View Application</a>
+
+                                </td>
+                              </tr>
+
                                     </table>
                                 </td>
                             </tr>
@@ -403,7 +416,7 @@
                                                     font-stretch: normal;
                                                     line-height: 1.25;
                                                     text-align: center;">
-                                              Any other questions?
+                                              Do you have any questions?
                                           </h2>
                                           <p style="
                                                     font-family: Lato;
@@ -414,7 +427,7 @@
                                                     line-height: 1.43;
                                                     margin-top: 0;
                                                     margin-bottom: 0;">
-                                              Feel free to contact our support team at <br> <a href="#" style="color:#4a89f5;">support@rentapplication.net</a>
+                                              Contact our support team any time at <br> <a href="#" style="color:#4a89f5;">support@rentapplication.net</a>
                                           </p>
                                     </td>
                                 </tr>

@@ -30,7 +30,6 @@
     <!-- CSS Reset -->
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-        @import url('https://fonts.googleapis.com/css?family=Cabin:700');
 
         /* What it does: Remove spaces around the email design added by some email clients. */
         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
@@ -161,7 +160,7 @@
             2. MSO tags for Desktop Windows Outlook enforce a 680px width.
             Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I've found that 680px is a good width. Change with caution.
         -->
-        <div style="max-width: 680px; margin: auto;>
+        <div style="max-width: 680px; margin: auto;">
             <!--[if mso]-->
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
             <tr>
@@ -176,22 +175,21 @@
                     <td bgcolor="#4a89f5">
 
                         <table der="0" cellspacing="0" cellpadding="0" width="100%">
-                            <tr>
-                                <td align="center" width="100%">
-                                    <img class="logo" src="logo.svg" alt="Logo" border="0" style="display:block; margin-top: 35px; margin-bottom: 16px;" />
-                                </td>
-                            </tr>
-
-                            <tr>
+                            <tr id="title-row">
                                 <td align="center" width="100%">
                                     <h1 class="header-title" style="margin: 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 25.2px; font-weight: bold; font-style: normal; text-align: center; color: #ffffff; margin-bottom: 0;">Good News!</h1>
                                 </td>
                             </tr>
 
-                            <tr>
+                            <tr id="logo-row">
                                 <td align="center" width="100%">
-                                    <p class="header-paragraph" style="margin: 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 18.2px; font-weight: normal; font-style: normal; text-align: center; color: #ffffff;">You’ve received an application
-</p>
+                                    <img class="logo" src="logo.svg" alt="Logo" border="0" style="display:block; margin-top: 16px; margin-bottom: 16px;" />
+                                </td>
+                            </tr>
+
+                            <tr id="subtitle-row">
+                                <td align="center" width="100%">
+                                    <p class="header-paragraph" style="margin: 0 20px 20px; font-family: Lato, Helvetica, Arial, sans-serif; font-size: 18.2px; font-weight: normal; font-style: normal; text-align: center; color: #ffffff;">You’ve received an application.</p>
                                 </td>
                             </tr>
 
@@ -329,6 +327,24 @@
 
                             <tr>
                                 <td align="left">
+                                    <h2 style="
+                                              font-family: Lato;
+                                              font-size: 16px;
+                                              font-weight: bold;
+                                              font-style: normal;
+                                              font-stretch: normal;
+                                              line-height: 1.25;
+                                              color: #333745;
+                                              text-align: left;
+                                              margin-top: 25px;
+                                              margin-bottom: 5px;">
+                                        What happens next?
+                                    </h2>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="left">
                                     <p style="
                                               font-family: Lato;
                                               font-size: 14px;
@@ -337,16 +353,16 @@
                                               font-stretch: normal;
                                               line-height: 1.43;
                                               color: #333745;
-                                              margin-top: 40px;
+                                              margin-top: 0px;
                                               margin-bottom: 30px;">
                                         Please review at your convenience, then notify the applicant when you've made a decision concerning his or her tenancy.
                                     </p>
                                 </td>
                             </tr>
 
-                              <tr>
+                              <tr id="button-row">
                                 <td class="cta-cell" align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                                  <a href="#" class="cta-button" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Cabin;font-size:17.3px;font-weight:bold;font-style:normal;color:#ffffff;padding:12px 28px;border-radius:5.8px;background-color:#0fc58d;box-shadow:-2px 5px 1px 1px #138763;border:solid 0.7px #0fc58d;display:block;margin:auto;margin-bottom:40px;text-decoration:none; width: 200px;">View Application</a>
+                                  <a href="#" class="cta-button" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Lato, Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;font-style:normal;color:#ffffff;padding:12px 28px;border-radius:5.8px;background-color:#0fc58d;box-shadow:-2px 5px 1px 1px #138763;border:solid 0.7px #0fc58d;display:block;margin:auto;margin-bottom:40px;text-decoration:none; width: 200px;text-shadow:-1px 1px rgba(0,0,0,0.3)">View Application</a>
                                 </td>
                               </tr>
 
@@ -355,6 +371,57 @@
                 </tr>
                 <!-- 1 Column Text + Button : END -->
 
+                <!-- Background Image with Text : BEGIN (using as footer)-->
+                <tr>
+                    <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
+                    <td bgcolor="#333333" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;">
+                        <div>
+                            <!--[if mso]>
+                            <table role="presentation" border="0" cellspacing="0" cellpadding="0" align="center">
+                            <tr>
+                            <td align="center" valign="top">
+                            <![endif]-->
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:500px; margin: auto;">
+                                <tr>
+                                    <td valign="middle" style="text-align: center; padding: 20px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #ffffff;">
+
+                                          <h2 style="
+                                                    font-family: Lato;
+                                                    font-size: 16px;
+                                                    font-weight: bold;
+                                                    font-style: normal;
+                                                    font-stretch: normal;
+                                                    line-height: 1.25;
+                                                    text-align: center;">
+                                              Do you have any questions?
+                                          </h2>
+                                          <p style="
+                                                    font-family: Lato;
+                                                    font-size: 14px;
+                                                    font-weight: normal;
+                                                    font-style: normal;
+                                                    font-stretch: normal;
+                                                    line-height: 1.43;
+                                                    margin-top: 0;
+                                                    margin-bottom: 0;">
+                                              Contact our support team any time at <br> <a href="#" style="color:#4a89f5;">support@rentapplication.net</a>
+                                          </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if mso]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]-->
+                        </div>
+                        <!--[if gte mso 9]>
+                        </v:textbox>
+                        </v:rect>
+                        <![endif]-->
+                    </td>
+                </tr>
+                <!-- Background Image with Text : END -->
 
 
            </table>
