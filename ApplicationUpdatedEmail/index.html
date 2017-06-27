@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no" />
     <title>Rent Application</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 
     <style type="text/css">
     html {
@@ -78,8 +79,7 @@
         padding: 25px;
     }
     .flexibleContainerCell-header {
-    	padding: 10px;
-
+    	padding: 15px 0 7px;
     }
     
     body,
@@ -95,27 +95,53 @@
         position: relative;
     }
     #emailFooter {
-    	background: #ffffff;
+    	background: #f7f9ff;
+    	border-top: solid 1px #e3e3e3;
     }
     .footer-link {
     	text-decoration: none !important;
     	font-weight: 700 !important;
     	border: none;
     }
-    .container-table {
-        max-width: 500px;
-        width: 90%;
-        margin: 0 auto;
-        border: 1px solid #e3e3e3;
-        border-radius: 5px;
-        overflow: hidden;
-        background: #ffffff;
+    .content-container {
+        max-width: 85%;
+        margin: 5px auto;
+        border-radius: 3px;
+        background: #f8f8f8;
+        padding: 11px 30px;
+        text-align: left;
+        display: block;
+        
+    }
+    .content-container .top-line {
+        font-size: 14px;
+        color: #747474;
+        line-height: 1.25;
+        font-weight: 400;
+        width: 100%;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+    }
+    .content-container .bottom-line {
+        font-size: 14px;
+        color: #5c5c5c;
+        line-height: 1.25;
+        font-weight: 600;
+        margin-top: 5px;
+        width: 100%;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
     }
     
     @media only screen and (max-width: 450px) {
         body {
             width: 100% !important;
             min-width: 100% !important;
+        }
+        h1 {
+            display: none !important;
         }
         table[id="emailBody"],
         table[class="flexibleContainer"],
@@ -135,8 +161,17 @@
         p {
         	width: 85% !important;
         }
+        span.left-align {
+            text-align: left !important;
+        }
+        .content-container {
+            max-width: 95% !important;
+        }
         .underlogo {
-            display: none !important;
+            width: 95% !important;
+            font-size: 17px !important;
+            margin-top: 12px !important;
+            max-width: 90% !important;
         }
     }
     </style>
@@ -166,11 +201,12 @@
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
                                                 <tr>
                                                     <td align="center" valign="top" width="100%" class="flexibleContainerCell-header">
-                                                        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" valign="top" class="textContent">
                                                                     <img src="logotype.png" class="logotype" width="40" style="text-align: center; margin-top: 0px;" alt="Rent Application" />
-                                                                    <span class="underlogo" style="font-family: 'Lato', Arial, sans-serif; font-weight: 400; font-size: 14px; color: #ffffff; text-align: center; line-height: 1.4; margin-top: 5px; display: block; max-width: 100%;">Rent Application</span>
+                                                                    <h1 style="color: #fff; font-size: 14px; font-weight: bold; margin-top: 4px;">Rent Application</h1>
+                                                                    <span class="underlogo" style="font-family: 'Lato', Arial, sans-serif; font-weight: 400; font-size: 18px; color: #ffffff; text-align: center; line-height: 1.4; margin-top: 20px; display: block; max-width: 90%;">Lina Massey’s Application has been updated</span>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -187,21 +223,36 @@
             </tr>
             <tr>
                 <td align="center" valign="top" id="bodyCell">
-                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" id="emailFooter">
+                    <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" id="emailBody">
                         <tr>
                             <td align="center" valign="top">
-                                <table border="0" bgcolor="#ffffff" cellpadding="0" cellspacing="0" width="100%" style="color:#FFFFFF;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#ffffff" style="color:#FFFFFF;">
                                     <tr>
                                         <td align="center" valign="top">
                                             <table border="0" cellpadding="0" cellspacing="0" width="100%" class="flexibleContainer">
                                                 <tr>
                                                     <td align="center" valign="top" width="100%" class="flexibleContainerCell-header">
-                                                        <table border="0" cellpadding="15" cellspacing="0" width="100%">
+                                                        <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                             <tr>
                                                                 <td align="center" valign="top" class="textContent">
-                                                                    <span style="color: #434343; font-weight: 700; font-size: 20px; text-align: center; display: block; font-family: 'Lato', Arial, sans-serif;">Lina Massey’s Application has been updated</span>
-                                                                    <span style="color: #333745; font-weight: 400; font-size: 14px; margin-top: 15px; text-align: left; display: block; width: 90%; font-family: 'Lato', Arial, sans-serif;"><span style="font-weight: 700;">Lina Massey</span> has made updates to their application, click below to view the application changes.</span>
-                                                                    <a href="https://www.rentapplication.net/" style="display: block; width: 200px; background: url(button.png); color: #fff; text-decoration: none; padding: 13px 0; background-repeat: no-repeat; background-size: contain; background-position: center; margin-top: 25px">View Application</a>
+                                                                    <span class="left-align" style="font-family: 'Lato', Arial, sans-serif; font-weight: 400; font-size: 16px; color: #333745; text-align: center; line-height: 1.4; margin-top: 0; margin-bottom: 25px; display: block; max-width: 80%;"><span style="font-weight: 700;">Lina Massey </span> has made the following updates to their application:</span>
+                                                                    <div class="content-container">
+                                                                        <span class="top-line">Address Line 1</span>
+                                                                        <span class="bottom-line">1234 Fairbanks Dr</span>
+                                                                    </div>
+                                                                    <div class="content-container">
+                                                                        <span class="top-line">Phone Number</span>
+                                                                        <span class="bottom-line">123-122-1233</span>
+                                                                    </div>
+                                                                    <div class="content-container">
+                                                                        <span class="top-line">Bank Statement</span>
+                                                                        <span class="bottom-line">file://bank_statement.pdf</span>
+                                                                    </div>
+                                                                    <div class="content-container">
+                                                                        <span class="top-line">Have You Ever Been Convicted Of A Crime?</span>
+                                                                        <span class="bottom-line">Yes</span>
+                                                                    </div>
+                                                                    <a href="https://www.rentapplication.net" style="display: block; color: #fff; border: none; text-decoration: none; width: 200px; padding: 15px 0; background: url(button.png) center center no-repeat; margin: 25px auto;">View Application</a>
                                                                 </td>
                                                             </tr>
                                                         </table>
